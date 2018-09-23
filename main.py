@@ -16,6 +16,7 @@
 from flask import Flask, render_template, request
 from flask_sslify import SSLify
 import genius
+import recommend
 
 app = Flask(__name__)
 sslify = SSLify(app, permanent=True)
@@ -32,8 +33,7 @@ def search():
         lyrics = genius.get_lyrics(request.args['query'])
     else:
         lyrics = genius.get_lyrics(request.form['query'])
-    data = [{'title': 'halo', 'artist': 'beyonce', 'lyrics': 'halo halo halo oh'},
-            {'title': 'left', 'artist': 'beyonce', 'lyrics': 'all your things to the left'}]
+    data = recommend.recommend(lyrics)
     return render_template('similar.html', data=data)
 
 
