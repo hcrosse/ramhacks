@@ -1,0 +1,39 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: rgba(0, 0, 0, 0) url("https://www.toptal.com/designers/subtlepatterns/patterns/ep_naturalblack.png") repeat scroll 0% 0%;
+	background: rgba(0,0,0,0) url("bg4.png") repeat scroll 0% 0%;
+}
+
+/* Search container */
+.main-header {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 6rem;
+	text-align: center;
+	color: white;
+}
+.container {
+	width: 75vw;
+	padding: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: center;
+	/*background-color: rgba(255,255,255,0.6);*/
+	border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+	text-align: center;
+}
+.container input[type=text] {
+	max-width: 75vw;
+	font-size: 2.5rem;
+}
+.container button {
+	min-width: 15rem;
+	font-size: 2.5rem;
+	font-family: 'Permanent Marker';
+}
+.container img {
+	display: inline-block;
+	max-width: 3rem;
+}
+
+

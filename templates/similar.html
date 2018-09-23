@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Songs Like This</title>
+	<link rel="stylesheet" href="/static/style2.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Permanent+Marker" rel="stylesheet">
+	<link rel="shortcut icon" href="/static/g4016.ico" type="image/x-icon">
+</head>
+
+<body>
+<div class='search-container'>
+	<h1 class="main-header"> Find songs similar to</h1>
+	<form action="/search" method="post"> <!-- There's another attribute indicating where you're posting to -->
+		<input type="text" name="query"/>
+		<button type="submit"><span>Search</span><img src="/static/jukebox.svg"/></button>
+	</form>
+</div>
+<div class='similar-container'>
+	{% for data in data %}
+	   <div class="song">
+		   <h2>{{data.title}}</h2>
+		   <h3>{{data.artist}}</h3>
+		   <p>{{data.lyrics}}</p>
+	   </div>
+	{% endfor %}
+</div>
+
+</body>
+
+
+</html>
